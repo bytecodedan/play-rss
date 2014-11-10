@@ -1,1 +1,1 @@
-web: target/universal/stage/bin/play-rss -Dhttp.port=$PORT
+web: target/universal/stage/bin/play-rss 
