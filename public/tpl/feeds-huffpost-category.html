@@ -1,0 +1,7 @@
+<div ng-controller="FeedsHuffPostCategoryCtrl">
+  <div class="blog-post" ng-repeat="item in feed.items">
+    <h3 class="blog-post-title">{{ item.title }}</h3>
+    <!--<img ng-src="{{item.image}}">-->
+    <p ng-bind-html="sanitize(item.description)"></p>
+  </div><!-- /.blog-post -->
+</div>

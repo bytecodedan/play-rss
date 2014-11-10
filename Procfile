@@ -1,0 +1,1 @@
+web: target/universal/stage/bin/ratings -Dhttp.port=$PORT 

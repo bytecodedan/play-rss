@@ -1,0 +1,33 @@
+<!-- navbar -->
+<div class="blog-masthead">
+  <div class="container">
+    <nav class="blog-nav">
+      <a class="blog-nav-item" ui-sref="feeds.automotive.category" ui-sref-active="active">Autoblog</a>
+      <a class="blog-nav-item" ui-sref="feeds.huffpost.category" ui-sref-active="active">Huffington Post</a>
+    </nav>
+  </div>
+</div>
+<!-- / navbar -->
+
+<div class="container">
+
+  <div class="blog-header">
+    <h1 class="blog-title">{{ app.name }}</h1>
+    <p class="lead blog-description">RSS feed aggregater</p>
+  </div>
+
+  <div class="row fade-in-up" ui-view>
+  </div><!-- /.row -->
+
+</div>
+
+<!-- footer -->
+<div class="blog-footer">
+  <p>
+    Blog template built for <a href="http://getbootstrap.com">Bootstrap</a>
+    by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+  <p>
+    <a href="#">Back to top</a>
+  </p>
+</div>
+<!-- / footer -->

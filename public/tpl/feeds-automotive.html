@@ -1,0 +1,17 @@
+<div class="col-sm-8 blog-main fade-in-up" ui-view>
+</div><!-- /.blog-main -->
+
+<div class="col-sm-3 col-sm-offset-1 blog-sidebar" ng-controller="FeedsAutomotiveCtrl">
+  <div class="sidebar-module">
+    <h4>Categories by Topic</h4>
+    <ol class="list-unstyled">
+      <li ng-repeat="topic in topics"><a ui-sref="feeds.automotive.category({category:topic.name})">{{ topic.formalName }}</a></li>
+    </ol>
+  </div>
+  <div class="sidebar-module">
+    <h4>Categories by Make</h4>
+    <ol class="list-unstyled">
+      <li ng-repeat="makeTopic in makeTopics"><a ui-sref="feeds.automotive.category({category:makeTopic.name})">{{ makeTopic.formalName }}</a></li>
+    </ol>
+  </div>
+</div><!-- /.blog-sidebar -->

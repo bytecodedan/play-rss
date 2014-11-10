@@ -1,0 +1,25 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET        /                                controllers.Application.index
+
+# Feeds
+GET        /feeds/autoblog                  controllers.Feeds.autoblog
+GET        /feeds/autoblog/:category        controllers.Feeds.autoblogByCategory(category: String)
+GET        /feeds/huffpost                  controllers.Feeds.huffingtonPost
+GET        /feeds/huffpost/:category        controllers.Feeds.huffingtonPostByCategory(category: String)
+
+
+# Test
+GET        /test                            controllers.Application.test
+
+# Versioned Assets
+GET        /vassets/*file                   controllers.Assets.versioned(path="/public", file: Asset)
+
+# Unversioned Assets
+GET        /assets/*file                    controllers.Assets.at(path="/public", file)
+
+# WebJars
+GET        /webjars/*file                   controllers.WebJarAssets.at(file)

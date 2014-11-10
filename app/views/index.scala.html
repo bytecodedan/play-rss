@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="app">
+    <head>
+        <meta charset="utf-8" />
+        <title>Play RSS</title>
+        <meta name="description" content="app, web app, responsive, responsive layout, admin, admin panel, admin dashboard, flat, flat ui, ui kit, AngularJS, ui route, charts, widgets, components" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <link rel='stylesheet' href='@routes.WebJarAssets.at(WebJarAssets.locate("bootstrap.min.css"))'>
+        <link rel='stylesheet' href='@routes.Assets.versioned("css/main.css")'>
+    </head>
+    @*<body >*@
+    <body ng-controller="MainCtrl">
+        <div ui-view></div>
+        <script src='@routes.WebJarAssets.at(WebJarAssets.locate("jquery.min.js"))'></script>
+        <!-- Angular -->
+        <script src='@routes.WebJarAssets.at(WebJarAssets.locate("angular.min.js"))'></script>
+        @*<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.26/angular.min.js"></script>*@
+        <script src='@routes.WebJarAssets.at(WebJarAssets.locate("angular-cookies.min.js"))'></script>
+        <script src='@routes.WebJarAssets.at(WebJarAssets.locate("angular-resource.min.js"))'></script>
+        <script src='@routes.WebJarAssets.at(WebJarAssets.locate("angular-animate.min.js"))'></script>
+        <script src='@routes.WebJarAssets.at(WebJarAssets.locate("angular-ui-router.min.js"))'></script>
+        <script src='@routes.WebJarAssets.at(WebJarAssets.locate("angular-translate.js"))'></script>
+        <script src='@routes.WebJarAssets.at(WebJarAssets.locate("angular-sanitize.min.js"))'></script>
+        <script src='@routes.WebJarAssets.at(WebJarAssets.locate("ngStorage.min.js"))'></script>
+        @*<script src="@routes.Assets.at("js/angular/ui-load.js")"></script>*@
+        @*<script src="@routes.Assets.at("js/angular/ui-jq.js")"></script>*@
+        @*<script src="@routes.Assets.at("js/angular/ui-validate.js")"></script>*@
+        <script src='@routes.WebJarAssets.at(WebJarAssets.locate("ui-bootstrap-tpls.min.js"))'></script>
+        <!-- App -->
+        <script src="@routes.Assets.versioned("js/app.js")"></script>
+        <script src="@routes.Assets.versioned("js/services.js")"></script>
+        <script src="@routes.Assets.versioned("js/controllers.js")"></script>
+        <script src="@routes.Assets.versioned("js/filters.js")"></script>
+        <script src="@routes.Assets.versioned("js/directives.js")"></script>
+    </body>
+</html>
