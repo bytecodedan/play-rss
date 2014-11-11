@@ -2,8 +2,6 @@ package controllers
 
 import play.api.mvc._
 
-//import scala.concurrent.ExecutionContext.Implicits.global
-
 object Application extends Controller {
 
   def test = Action {

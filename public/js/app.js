@@ -65,6 +65,17 @@ var app = angular.module('app', [
                url: '/{category:.*}',
                templateUrl: 'assets/tpl/feeds-huffpost-category.html'
            })
+
+          // huffington post
+          .state('feeds.nfl', {
+            abstract: true,
+            url: '/nfl',
+            templateUrl: 'assets/tpl/feeds-nfl.html'
+          })
+          .state('feeds.nfl.category', {
+            url: '/{category:.*}',
+            templateUrl: 'assets/tpl/feeds-nfl-category.html'
+          })
     }
   ]
 )

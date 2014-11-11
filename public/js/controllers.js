@@ -105,4 +105,20 @@ angular.module('app.controllers', ['ngCookies'])
     }
   }])
 
+
+  .controller('FeedsNFLCtrl', ['$scope', '$sce', function($scope, $sce) {
+    $scope.topic = [
+      {name: 'home', formalName: 'Top News'},
+      {name: 'gamehighlightsVideo', formalName: 'Top Game'}
+    ];
+  }])
+
+  .controller('FeedsNFLCategoryCtrl', ['$scope', '$stateParams', '$sce', 'NFLFeeds', function($scope, $stateParams, $sce, NFLFeeds) {
+    if ($stateParams.category !== 'top-news') {
+      $scope.feed = NFLFeeds.get({category: $stateParams.category});
+    } else {
+      $scope.feed = NFLFeeds.get();
+    }
+  }])
+
  ;

@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-  <meta charset="UTF-8">
-  <title></title>
-</head>
-<body>
+<div class="col-sm-8 blog-main fade-in-up" ui-view>
+</div><!-- /.blog-main -->
 
-</body>
-</html>
+<div class="col-sm-3 col-sm-offset-1 blog-sidebar" ng-controller="NFLPostCtrl">
+  <div class="sidebar-module">
+    <h4>Categories by Topic</h4>
+    <ol class="list-unstyled">
+      <li ng-repeat="item in topic"><a ui-sref="feeds.nfl.category({category:item.name})">{{ item.formalName }}</a></li>
+    </ol>
+  </div>
+</div><!-- /.blog-sidebar -->

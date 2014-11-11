@@ -5,12 +5,17 @@
 # Home page
 GET        /                                controllers.Application.index
 
-# Feeds
+# Autoblog Feeds
 GET        /feeds/autoblog                  controllers.Feeds.autoblog
 GET        /feeds/autoblog/:category        controllers.Feeds.autoblogByCategory(category: String)
+
+# Huffington Post Feeds
 GET        /feeds/huffpost                  controllers.Feeds.huffingtonPost
 GET        /feeds/huffpost/:category        controllers.Feeds.huffingtonPostByCategory(category: String)
 
+# NFL.com Feeds
+GET        /feeds/nfl                       controllers.Feeds.nfl
+GET        /feeds/nfl/:category             controllers.Feeds.nflByCategory(category: String)
 
 # Test
 GET        /test                            controllers.Application.test

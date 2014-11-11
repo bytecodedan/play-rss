@@ -12,4 +12,8 @@ angular.module('app.services', [])
 .factory('HuffPostFeeds', ['$resource', function($resource) {
   return $resource('/feeds/huffpost/:category', { make: "@category" }, {})
 }])
+
+.factory('NFLFeeds', ['$resource', function($resource) {
+  return $resource('/feeds/nfl/:category', { make: "@category" }, {})
+}])
 ;

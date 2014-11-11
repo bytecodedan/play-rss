@@ -11,6 +11,7 @@ import scala.concurrent.ExecutionContext.Implicits.global
 
 object Feeds extends Controller {
 
+  /* Autoblog */
   def autoblog = Action.async {
     WS.url("http://www.autoblog.com/rss.xml").get().map { response =>
       Ok(Json.toJson(FeedParser.parse(response.body)))
@@ -23,6 +24,8 @@ object Feeds extends Controller {
     }
   }
 
+
+  /* Huffington Post */
   def huffingtonPost = Action.async {
     WS.url("http://www.huffingtonpost.com/feeds/index.xml").get().map { response =>
       Ok(Json.toJson(FeedParser.parse(response.body)))
@@ -35,4 +38,17 @@ object Feeds extends Controller {
     }
   }
 
+
+  /* NFL.com */
+  def nfl = Action.async {
+    WS.url("http://www.nfl.com/rss/rsslanding?searchString=home").get().map { response =>
+      Ok(Json.toJson(FeedParser.parse(response.body)))
+    }
+  }
+
+  def nflByCategory(category: String) = Action.async {
+    WS.url(s"http://www.nfl.com/rss/rsslanding?searchString=$category").get().map { response =>
+      Ok(Json.toJson(FeedParser.parse(response.body)))
+    }
+  }
 }
