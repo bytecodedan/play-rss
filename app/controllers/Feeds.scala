@@ -37,18 +37,5 @@ object Feeds extends Controller {
       Ok(Json.toJson(FeedParser.parse(response.body)))
     }
   }
-
-
-  /* NFL.com */
-  def nfl = Action.async {
-    WS.url("http://www.nfl.com/rss/rsslanding?searchString=home").get().map { response =>
-      Ok(Json.toJson(FeedParser.parse(response.body)))
-    }
-  }
-
-  def nflByCategory(category: String) = Action.async {
-    WS.url(s"http://www.nfl.com/rss/rsslanding?searchString=$category").get().map { response =>
-      Ok(Json.toJson(FeedParser.parse(response.body)))
-    }
-  }
+  
 }
