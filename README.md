@@ -12,6 +12,9 @@ Stack
 * AngularJS 1.2.26
 
 
+Demo
+---------------
+
 http://play-rss.herokuapp.com/
 
 NOTE: The demo is hosted on a Heroku dev account.  The first request may take a few seconds as the dyno (VM) wakes up - a result of being idle for some time.  Subsequent requests will be much faster.
