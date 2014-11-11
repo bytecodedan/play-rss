@@ -1,7 +1,0 @@
-# RSS feeds
-
-reddit     <> http://www.reddit.com/.rss
-bbc        <> http://feeds.bbci.co.uk/news/rss.xml
-guardian   <> http://feeds.guardian.co.uk/theguardian/technology/rss
-hackernews <> https://news.ycombinator.com/rss
-wsj        <> http://online.wsj.com/xml/rss/3_7085.xml
